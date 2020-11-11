@@ -1,0 +1,724 @@
+﻿@model IEnumerable<KohaKai.blog>
+@{
+    ViewBag.Title = "Index";
+}<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Koha Kai</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#Services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#portfolio">Photos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#Team">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#Events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#Blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#Forms">Forms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="masthead" ;>
+    <div class="container">
+        <div class="intro-text">
+            <!-- Header
+            <div class="intro-lead-in">test1</div>
+            <div class="intro-heading text-uppercase">test2</div>
+            -->
+        </div>
+    </div>
+</header>
+
+
+<main>
+    @using System.Data;
+    @{ DateTime Temp = DateTime.Now; }
+    <!-- Services -->
+    <section class="page-section" id="Services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4 class="service-heading">Community <br> Volunteering</h4>
+                    <img class="mx-auto rounded-circle" src="img/community.jpg" alt="">
+                    <p class="text-muted">
+                        Limited opportunities exist for people to support the work Koha Kai does in community through volunteering, and working alongside our teams in a warm, engaging and enthusiastic environment.
+                        Sharing knowledge, skills and your time with people striving to transform their lives, is a privilege and honour that none take for granted.  Supporting children to learn easier through providing wholesome lunches, and understanding parents are both time poor and financially challenged is a rich and rewarding opportunity to really make a difference.  Contact us via email at  invercargill.kohakai@gmail.com Less.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="service-heading">Vocational Training - Hospitality</h4>
+                    <img class="mx-auto rounded-circle" src="img/hospitality.jpg" alt="">
+                    <p class="text-muted">
+                        Providing skills-based learning supporting people to live independently in community, make new friends, and become work ready, in a welcoming, encouraging and safe environment.
+                        Supporting people to meet their goals and aspirations, at their own rate, in the way that best suits them. Learning by doing.  Learning with a purpose.  We provide opportunities and encourage a life of purpose for people seeking a pathway to employment, self-determination and independence. Contact us at invercargill.kohakai@gmail.com for more information or message us through our Facebook Page.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="service-heading">Vocational Training - Horticulture</h4>
+                    <img class="mx-auto rounded-circle" src="img/horticulture.jpg" alt="">
+                    <p class="text-muted">
+                        Providing skills-based learning supporting people to live independently in community, make new friends, and become work ready, in a welcoming, encouraging and safe environment.
+                        Supporting people to meet their goals and aspirations, at their own rate, in the way that best suits them. Learning by doing.  Learning with a purpose.  We provide opportunities and encourage a life of purpose for people seeking a pathway to employment, self-determination and independence. Contact us at invercargill.kohakai@gmail.com for more information or through our facebook page.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="page-section" id="About">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">About</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/01.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>August 2013</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Meeting with people to get direction on what they wanted to achieve and how they wanted to achieve it</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/02.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>April 2014</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Began cooking in our first School</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/03.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>October 2014</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Introduction of Gardens Programme</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/04.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>March 2015</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">2nd School joins the programme</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/05.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>May 2015</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Registered Koha Kai as a Charitable Trust</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/06.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>September 2015</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Incorporating two more schools</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/07.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>January 2016</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Formalised Partnership with Schools through incorporation of MOU</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/08.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>March 2017</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Trustpower Community Awards National Supreme Winner</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/09.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>May 2017</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">First Significant funding to support Koha Kai Operation</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/10.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>November 2017</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Commissioned our Teaching Kitchen at The Pantry</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/11.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>November 2017</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Turned first Turf on our Market Garden</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/12.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>April 2018</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Major Fundraiser – Fight For Kidz</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/13.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>June 2018</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Partnered with SIT to deliver Koha Kai Horticulture Programme as NZQA Foundation Studies</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/14.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>October 2018</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">First Regional School joined the “Lunches in Schools” programme</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="~/img/about/15.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>January 2019</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Commissioned Food Trailer</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <h4>
+                                    Be Part
+                                    <br>Of Our
+                                    <br>Story!
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Photos-->
+    <section class="bg-light page-section" id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Photos</h2>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (photo item in KohaKai.Models.MyModel.db.photos)
+                {
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a class="portfolio-link" data-toggle="modal" href="#portfolioModal@(Html.DisplayFor(modelItem => item.id))">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fas fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="@Url.Content("~/Photos/GetImage/" + Html.DisplayFor(modelItem => item.id))" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>@Html.DisplayFor(modelItem => item.title)</h4>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    @foreach (photo item in KohaKai.Models.MyModel.db.photos)
+    {
+        <div class="portfolio-modal modal fade show" id="portfolioModal@(Html.DisplayFor(modelItem => item.id))" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">@Html.DisplayFor(modelItem => item.title)</h2>
+                                    <img class="img-fluid d-block mx-auto" src="@Url.Content("~/Photos/GetImage/" + Html.DisplayFor(modelItem => item.id))" alt="">
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <!-- Team body -->
+    <section class="bg-light page-section" id="Team">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="~/img/team/01.jpg" alt="">
+                        <h4>Janice Lee</h4>
+                        <p class="text-muted">
+                            Janice Lee is the Founder and Project Lead of Koha Kai. Koha Kai is a Charitable Trust which is focused on becoming self-sustaining through Social Enterprise business principles and concepts.
+                        </p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="~/img/team/02.jpg" alt="">
+                        <h4>Gary Tong</h4>
+                        <p class="text-muted">Gary Tong is Mayor of Southland District Council and is in his second term, after a long and varied career in the south.</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="~/img/team/03.jpg" alt="">
+                        <h4>Mark Doggett</h4>
+                        <p class="text-muted">Mark Doggett is a Principal at Malloch McClean Chartered Accountants and deal in all aspects of being a Chartered Accountant, including being the principal for the majority of the firms Not-For Profit Entities.</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="~/img/team/04.jpg" alt="">
+                        <h4>Doreen Evans</h4>
+                        <p class="text-muted">Doreen Evans is a partner in AWS Legal and her area of specialist skills isCorporate and commercial, Property, Franchising and Trademarks, Trust, Asset Protection, Succession planning, Employment and Personal Client Services.</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="~/img/team/05.jpg" alt="">
+                        <h4>Louise Chan</h4>
+                        <p class="text-muted">Service Development: Designing, developing, implementing, auditing (using Health of the Nation Outcome Scales) and evaluating an innovative service within Waitemata Mental Health Service for Older People.</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="~/img/team/06.jpg" alt="">
+                        <h4>Jared Cappie</h4>
+                        <p class="text-muted">Jared Cappie is Manager of Sports Southland. Jared grew up in Invercargill and attended Otago University and the Sports’ Institute of Otago. Healthy Families initiative is overseen through Sports Southland.</p>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events -->
+    <section class="bg-light page-section" id="Events">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Events</h2>
+                </div>
+            </div>
+            <center>
+                <iframe src="https://calendar.google.com/calendar/embed?src=t8v0dbqk38lf2ar2k5msd476ao%40group.calendar.google.com&ctz=Pacific%2FAuckland" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+            </center>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="bg-light page-section" id="Blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Blog</h2>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-10 mx-auto">
+                @foreach (blog item in KohaKai.Models.MyModel.db.blogs)
+                {
+                    <div class="post-preview">
+                        <a data-toggle="modal" href="#blog@(Html.DisplayFor(modelItem => item.id))">
+                            <h2 class="post-title">
+                                @Html.DisplayFor(modelItem => item.title)
+                            </h2>
+                        </a>
+                        <p class="post-meta">
+                            Posted by @Html.DisplayFor(modelItem => item.author) on @item.date.Value.ToLongDateString()
+                        </p>
+                    </div>
+                    <hr>
+                }
+            </div>
+        </div>
+    </section>
+    @foreach (blog item in KohaKai.Models.MyModel.db.blogs)
+    {
+        <div class="portfolio-modal modal fade show" id="blog@(Html.DisplayFor(modelItem => item.id))" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here -->
+                                    <h2 class="text-uppercase">@Html.DisplayFor(modelItem => item.title)</h2>
+                                    <p>@Html.DisplayFor(modelItem => item.body)</p>
+                                    <ul class="list-inline">
+                                        <li>@Html.DisplayFor(modelItem => item.author)</li>
+                                        <li>@item.date.Value.ToLongDateString()</li>
+
+                                    </ul>
+                                    <button class="btn btn-primary" data-dismiss="modal" type="button">
+                                        <i class="fas fa-times"></i>
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <!-- Forms -->
+    <section class="bg-light page-section" id="Forms">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Forms</h2>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-10 mx-auto">
+
+
+                <div class="post-preview">
+                    <a href="http://www.edenz.ac.nz/forms/Police-Vetting-Form.pdf">
+                        <h2 class="post-title">NZ Police vetting form</h2>
+                    </a>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="http://www.edenz.ac.nz/forms/Police-Vetting-Form.pdf">
+                        <h2 class="post-title">Volunteer forms (Content Management)</h2>
+                    </a>
+                </div>
+                <hr>
+                <div class="post-preview">
+                    <a href="http://www.edenz.ac.nz/forms/Police-Vetting-Form.pdf">
+                        <h2 class="post-title">Event booking forms</h2>
+                    </a>
+                </div>
+                <div class="post-preview">
+                    <hr>
+                    <a href="http://www.edenz.ac.nz/forms/Police-Vetting-Form.pdf">
+                        <h2 class="post-title">Merchandise Forms / Order list</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form id="contactForm" action="Home/SendMail" method="post" name="sentMessage" novalidate="novalidate">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" id="msg_name" name="msg_name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="msg_email" name="msg_email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="msg_phone" name="msg_phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="msg_message" name="msg_message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; Koha Kai</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/kohakai/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    <li class="list-inline-item">
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

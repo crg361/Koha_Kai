@@ -1,0 +1,6 @@
+﻿@{
+
+    if (HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"].ToString() != "Home") { Layout = "~/Views/Admin/_AdminLayout.cshtml"; }
+    else{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}

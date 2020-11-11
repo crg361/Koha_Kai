@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Welcome to Koha Kai</title>
+    <!--CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type='text/css' />
+    <link href="~/css/all.min.css" rel="stylesheet" type='text/css' />
+    <link href="~/css/site.css" rel="stylesheet" type='text/css' />
+    <!--Font -->
+    <link href="~/css/Font-Droid Serif.css" rel="stylesheet" type='text/css' />
+    <link href="~/css/Font-Kaushan Script.css" rel="stylesheet" type='text/css' />
+    <link href="~/css/Font-Montserrat.css" rel="stylesheet" type='text/css' />
+    <link href="~/css/Font-Roboto Slab.css" rel="stylesheet" type='text/css' />
+
+</head>
+<body id="page-top">
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/js/home.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

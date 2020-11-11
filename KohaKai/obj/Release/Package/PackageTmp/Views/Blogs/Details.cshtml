@@ -1,0 +1,55 @@
+﻿@model KohaKai.blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>blog</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Model.date.Value.ToLongDateString()
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.body)
+        </dt>
+
+        <dd>
+
+            @Html.DisplayFor(model => model.body)
+            @foreach (string i in (Model.body.Split('\n')))
+            {<p align="left">@i.ToString()</p>}
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

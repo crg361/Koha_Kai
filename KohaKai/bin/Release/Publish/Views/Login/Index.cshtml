@@ -1,0 +1,30 @@
+﻿<div class="jumbotron">
+    <h1>Koha kai</h1>
+    <p class="lead">Website administrator Log in from here.</p>
+    <form method="get">
+        User name: <input type="text" ID="name" />
+        Password: <input type="text" ID="pw" /><br><br>
+        <button type="button" onclick="Jlog();" id="butlogin">Log in</button>
+    </form>
+</div>
+<script type="text/javascript">
+    function Jlog() {
+        $.ajax({
+            url: "/Login/CheckLog",
+            data: {
+                "name": $("#name").val(), "pw": $("#pw").val(),
+            },
+            async: false,
+            type: "post",
+            dataType: "text",
+            success: function (response) {
+                if (response) {
+                    window.location.href = '/Admin';
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                //alert(errorThrown);
+            }
+        });
+    }
+</script>
